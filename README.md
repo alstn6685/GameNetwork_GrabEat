@@ -7,6 +7,7 @@
 
 # 대표패킷 5가지
 Client to Server
+
 type1 로그인
 {
 	받을 정보 유저ID, 비밀번호
@@ -23,6 +24,7 @@ type5 플레이어 이동
 }
 
 Server to Client
+
 type11 방코드
 {
 	방코드
