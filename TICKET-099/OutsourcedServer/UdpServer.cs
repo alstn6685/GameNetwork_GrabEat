@@ -113,7 +113,7 @@ namespace BattleArena
 
             // TCP로 로그인한 세션을 찾습니다
             ClientSession? session = GameServer.Instance.FindSession(playerId);
-            if (session == null) return;
+            if (session == null || !session.IsLoggedIn) return;
 
             // 첫 UDP 패킷이면 주소를 기억해둡니다.
             // 앞으로 이 주소로 STATE를 보내줄 겁니다.
@@ -122,6 +122,9 @@ namespace BattleArena
                 session.UdpEndPoint = from;
                 Console.WriteLine($"[UDP] {session.Nickname} 주소 등록 : {from}");
             }
+
+            // 등록된 UDP 주소와 다른 송신자는 이 세션을 갱신할 수 없습니다.
+            if (!session.UdpEndPoint.Equals(from)) return;
 
             // 오래된 패킷은 버립니다.
             // UDP는 순서를 보장하지 않아서 5번보다 6번이 먼저 올 수 있습니다.
