@@ -1,0 +1,6 @@
+Actual socket probe | student 22220121 Kim Minsu | TCP 12472 UDP 12473
+Stage baseline | case residual
+A id=1 source=('127.0.0.1', 58058)
+send long y=12345 -> STATE|1,BotA,5,12345
+send short y=1 -> STATE|1,BotA,5,12345
+server alive=True

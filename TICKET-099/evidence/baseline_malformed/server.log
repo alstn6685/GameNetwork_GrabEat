@@ -1,0 +1,19 @@
+╔══════════════════════════════════════════╗
+║   배틀아레나 서버  (외주 납품본 v0.9)      ║
+║   TICKET-099  인수 검토 대상               ║
+╚══════════════════════════════════════════╝
+
+  학번 22220121 / 김민수
+  TCP 12472  ·  UDP 12473
+
+[TCP] 포트 12472번에서 접속을 기다립니다
+[UDP] 포트 12473번에서 위치 패킷을 기다립니다
+
+Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot convert null to 'int' because it is a non-nullable value type
+   at CallSite.Target(Closure, CallSite, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure, CallSite, Object)
+   at BattleArena.ClientSession.HandlePacket(String json) in C:\Users\User\Documents\Codex\2026-10-29\files-mentioned-by-the-user-docx\work\repository\TICKET-099\OutsourcedServer\ClientSession.cs:line 73
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__128_1(Object state)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()

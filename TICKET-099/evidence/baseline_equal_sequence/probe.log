@@ -1,0 +1,6 @@
+Actual socket probe | student 22220121 Kim Minsu | TCP 12472 UDP 12473
+Stage baseline | case equal_sequence
+A id=1 source=('127.0.0.1', 58059)
+send seq=1 (5,5) -> STATE|1,BotA,5,5
+duplicate seq=1 (9,9) -> STATE|1,BotA,9,9
+server alive=True
