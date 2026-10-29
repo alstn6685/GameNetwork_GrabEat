@@ -17,6 +17,8 @@ namespace BattleArena
         public string Nickname { get; private set; } = "Unknown";
 
         // ── 위치 정보 (UDP로 갱신됨) ──
+        public bool IsLoggedIn { get; private set; }
+
         public int X { get; set; }
         public int Y { get; set; }
 
@@ -102,6 +104,9 @@ namespace BattleArena
                 PlayerId = PlayerId,
                 Message  = $"{Nickname}님, 배틀아레나에 오신 것을 환영합니다!"
             });
+
+            // WELCOME 전송이 완료된 세션만 일반 알림을 받습니다.
+            IsLoggedIn = true;
 
             GameServer.Instance.Broadcast(new NoticePacket
             {

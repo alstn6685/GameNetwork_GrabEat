@@ -1,0 +1,10 @@
+{
+  "stage": "async_io",
+  "student_id": 22220121,
+  "tcp": 12472,
+  "udp": 12473,
+  "selection": "8\n1\n\n0\n",
+  "tester_exit": 0,
+  "server_exit_before_cleanup": null,
+  "duration_seconds": 17.09
+}
