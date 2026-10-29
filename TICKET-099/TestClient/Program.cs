@@ -153,6 +153,9 @@ namespace BattleArena
                 _udp = new Socket(AddressFamily.InterNetwork,
                                   SocketType.Dgram, ProtocolType.Udp);
 
+                // 수신 루프를 시작하기 전에 OS가 빈 로컬 포트를 배정하게 합니다.
+                _udp.Bind(new IPEndPoint(IPAddress.Any, 0));
+
                 _udpServer = new IPEndPoint(IPAddress.Parse(SERVER_IP), StudentConfig.UdpPort);
 
                 _seq = 0;

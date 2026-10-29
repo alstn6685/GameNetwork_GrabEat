@@ -1,0 +1,7 @@
+Actual TestClient method probe | student 22220121 | TCP 12472 UDP 12473
+round=1 id=1 udpError=수신 중단 : InvalidOperationException You must call the Bind method before performing this operation.
+socket bound=False
+after MOVE state=(아직 받은 것 없음) error=수신 중단 : InvalidOperationException You must call the Bind method before performing this operation.
+round=2 id=2 udpError=수신 중단 : InvalidOperationException You must call the Bind method before performing this operation.
+socket bound=False
+after MOVE state=(아직 받은 것 없음) error=수신 중단 : InvalidOperationException You must call the Bind method before performing this operation.
